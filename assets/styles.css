@@ -1,0 +1,225 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Body and font settings */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    animation: fadeIn 1.5s ease-in-out;
+    position: relative; /* Allows absolute positioning of background particles */
+    overflow: hidden;  /* Prevents the background from going outside the body */
+}
+
+/* Header Section */
+header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    animation: slideDown 1s ease-out;
+    position: relative;
+    z-index: 1; /* Ensures the header is above the background */
+}
+
+.header-title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards 0.3s;
+}
+
+.header-subtitle {
+    font-size: 1.5rem;
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards 0.6s;
+}
+
+/* General Section Styling */
+.section {
+    padding: 40px 0;
+    background-color: white;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.5s forwards;
+}
+
+/* About Section */
+#about {
+    background-color: #fafafa;
+    text-align: center;
+    animation: slideInLeft 1.5s ease-in-out;
+}
+
+#about p {
+    font-size: 1.2rem;
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards 1s;
+}
+
+/* Skills Section */
+#skills ul {
+    list-style-type: none;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards 1.3s;
+}
+
+#skills li {
+    display: inline-block;
+    margin: 10px 20px;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+#skills li:hover {
+    transform: scale(1.1);
+    color: #007bff;
+}
+
+/* Projects Section */
+#projects .project {
+    background-color: #e9ecef;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    animation: bounceIn 1s ease-out;
+}
+
+.project h3 {
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards 1.6s;
+}
+
+.project p {
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards 2s;
+}
+
+/* Contact Section */
+#contact p {
+    text-align: center;
+    font-size: 1.2rem;
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards 2.5s;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    animation: slideUp 1s ease-out;
+}
+
+/* Image Styles */
+.profile-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 20px 0;
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards 1.8s;
+}
+
+/* Moving Background Particles */
+@keyframes moveParticles {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(50%, 50%);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.background-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0; /* Ensure particles are in the background */
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 123, 255, 0.6);
+    border-radius: 50%;
+    animation: moveParticles 5s infinite alternate ease-in-out;
+    opacity: 0.8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
