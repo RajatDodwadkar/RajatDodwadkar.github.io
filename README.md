@@ -24,7 +24,7 @@ This portfolio highlights my professional journey, side projects, public talks, 
 - Clean and responsive UI
 - Sections for about, skills, projects, achievements, and contact
 - Direct links to GitHub, LinkedIn, and resume
-- Optimized for both desktop and mobile
+- Optimized for desktop
 
 
 ## 📬 Contact
@@ -33,7 +33,6 @@ Feel free to connect with me!
 
 - LinkedIn: [@rajatdodwadkar](https://www.linkedin.com/in/rajatdodwadkar/)
 - GitHub: [@RajatDodwadkar](https://github.com/RajatDodwadkar)
-- Twitter: [@RajatDodwadkar](https://twitter.com/RajatDodwadkar)
 
 ---
 
